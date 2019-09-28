@@ -1,0 +1,4 @@
+1. Recover deleted or hard reset changes, please check instructions on branch 
+   reflog
+2. Add files after commit, or edit commit message, please checkout instructions 
+   on branch commit-amend
