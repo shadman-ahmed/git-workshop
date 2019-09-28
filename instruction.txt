@@ -1,0 +1,9 @@
+# git commit on wrong branch
+
+[Description]
+git reset --hard
+git reset --soft and stash
+git cherry-pick
+
+[Instruction]
+[Example #1] - git reset --hard 
