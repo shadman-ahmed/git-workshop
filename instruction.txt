@@ -7,3 +7,28 @@ git cherry-pick
 
 [Instruction]
 [Example #1] - git reset --hard 
+1. touch file
+2. git add file
+3. git commit file
+4. git reset HEAD~ --hard
+5. git checkout -b apt-branch
+6. git reset <sha-of-commit>    # reflog to the rescue 
+
+[Example #2] - git reset --soft
+0. start on wrong-branch
+1. Follow instructions 1 to 3 of example 1
+2. git reset HEAD~ --soft
+3. git stash
+4. git checkout apt-branch
+6. git stash pop
+7. git commit
+
+[Example #3] - git cherry-pick 
+0. start on wrong-branch
+1. touch file3
+2. git add file3
+3. git commit file3
+4. git checkout apt-branch
+5. git cherry-pick wrong-branch <commit-sha> # ignore sha if picking last commit 
+6. git checkout wrong-branch
+7. git reset HEAD~ --hard
