@@ -1,4 +1,17 @@
-1. Recover deleted or hard reset changes, please check instructions on branch 
-   reflog
-2. Add files after commit, or edit commit message, please checkout instructions 
-   on branch commit-amend
+# git commit --amend
+
+[Description]
+git commit --amend to edit latest commit message
+git commit --ammend --no-edit to add staged files to last commit
+
+[Instruction]
+[Example #1] - git add file after commit
+1. touch file
+2. git add file
+3. git commit -m "Add file"
+4. touch file2
+5. git add file2
+6 git commit --amend --no-edit  # it will add all staging file to the commit
+
+[Example #2] - git edit commit message
+1. git commit --amend
