@@ -1,8 +1,26 @@
-1. Recover deleted or hard reset changes, please check instructions on branch 
-   reflog
-2. Add files after commit, or edit commit message, please check instructions on 
-   branch commit-amend
-3. To move commit from wrong branch, please check instructions on branch 
-   wrong-branch
-4. To revert specifc commit or file, please check instructions on branch 
-   git-revert
+# git revert | git checkout
+
+[Description]
+git revert to revert changes from history
+git checkout to revert changes of a specific file from history
+
+[Instruction]
+[Example #1] - git revert
+1. touch file | echo 'hello inflack' > file
+2. git add file
+3. git commit -m "msg"
+4. rm file
+5. git add file
+6. git commit -m "delete file"
+7. git revert <sha-of-delete-file>
+
+[Example #2]
+1. touch file | echo 'Hello World' > file | touch file2 \
+    | echo 'Hello Inflack' > file2
+2. git add file file2
+3. git commit -m "add file, file2"
+4. echo 'Hello BARD' > file | echo 'Hello ETI' > file2
+5. git add file file2
+6. git commit -m "Update file file2"
+7. git checkout <add-commit-sha> file2
+8. git commit -m "Revert file2"
