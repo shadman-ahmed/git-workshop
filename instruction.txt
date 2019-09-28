@@ -1,0 +1,8 @@
+1. Recover deleted or hard reset changes, please check instructions on branch 
+   reflog
+2. Add files after commit, or edit commit message, please check instructions on 
+   branch commit-amend
+3. To move commit from wrong branch, please check instructions on branch 
+   wrong-branch
+4. To revert specifc commit or file, please check instructions on branch 
+   git-revert
