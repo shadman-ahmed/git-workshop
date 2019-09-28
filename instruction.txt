@@ -1,2 +1,23 @@
-1. Recover deleted or hard reset changes, please check instructions on branch 
-   reflog.
+# git reflog - reference log (time machine)
+
+[Description]
+Reference logs, or "reflogs", record when the tips of branches and other 
+references were updated in the local repository.
+
+[Instruction]
+[Example #1]
+1. git checkout -b 'delete-me'  # creates a branch delete-me and moves to it
+2. touch file                   # creates a file
+3. git add file                 # adds the file to staging area
+4. git commit -m "add file"     # saves the file 
+5. git reset --hard HEAD~1      # resets 1 commit
+6. git reflog                   # shows git history. You are to track sha for 
+                                # add file commit
+7. git reset <sha-add-file>     # recovers the sha snapshot
+8. undo unstaged changes        # remove unstaged file changes due to hard reset
+
+[Example #2]
+1. git checkout reflog
+2. git branch -D 'delete-me' - (should show the tip sha for delete-me branch) 
+3. git reflog - track last sha of delete-me branch
+4. git checkout -b 'delete-me' <delete-me-tip-sha>
